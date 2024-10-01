@@ -35,9 +35,9 @@ Before running the script, ensure that you have:
 
 2. Give execution permission to the script:
    ```bash
-   chmod +x setup_script.sh```
+   chmod +x server_init.sh```
    
 
 3. Execute the script:
-  ```bash
-   sudo setup_script.sh```
+     ```bash
+      sudo server_init.sh```
