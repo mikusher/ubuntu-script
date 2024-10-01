@@ -147,17 +147,17 @@ install_database "redis:latest" "redis-server" "6379" "REDIS_PASSWORD" "--append
 install_database "mysql:latest" "mysql-server" "3306" "MYSQL_ROOT_PASSWORD" "-v /data:/var/lib/mysql"
 
 # Set up Python virtual environment for Flask app
-echo "Setting up Python virtual environment for Flask app..."
-read -rp "Enter the directory for your Flask app (e.g., /opt/my_flask_app): " flask_app_dir
-mkdir -p "$flask_app_dir"
-cd "$flask_app_dir"
+# echo "Setting up Python virtual environment for Flask app..."
+# read -rp "Enter the directory for your Flask app (e.g., /opt/my_flask_app): " flask_app_dir
+# mkdir -p "$flask_app_dir"
+# cd "$flask_app_dir"
 
-python3 -m venv venv
-source venv/bin/activate
-pip install --upgrade pip
-pip install Flask
+# python3 -m venv venv
+# source venv/bin/activate
+# pip install --upgrade pip
+# pip install Flask
 
-echo "Flask app environment set up at $flask_app_dir with a virtual environment named 'venv'."
+# echo "Flask app environment set up at $flask_app_dir with a virtual environment named 'venv'."
 
 # Mark the script as complete
 touch /opt/setup_completed
